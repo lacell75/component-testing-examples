@@ -9,7 +9,7 @@ describe('Lit component testing', () => {
       html`<my-element />`,
       document.body
     )
-
+    await expect(await $('myyyy-element')).not.toBeDisplayed();
     const button = await $('my-element').$('>>>button')
     await expect(button).toHaveText('count is 0')
 
